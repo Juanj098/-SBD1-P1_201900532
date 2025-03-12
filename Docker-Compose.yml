@@ -1,0 +1,39 @@
+services:
+  #oracle-database
+
+  db:
+    image:  container-registry.oracle.com/database/free:latest
+    container_name: "SBD1_P1_201900532"
+    ports:
+      - "1522:1521"
+    environment:
+      - ORACLE_PWD=G3R4RDI
+      - ORACLE_CHARACTERSET=AL32UTF8
+      - ENABLE_ARCHIVELOG=true 
+      - ENABLE_FORCE_LOGGING=true 
+      - TZ=America/Guatemala
+    volumes:
+      - ./oracle-db:/opt/oracle/oradata
+
+  #Backend
+
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend-container
+    restart: always
+    volumes:
+      - ./backend/src:/app/src
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - PORT=3000
+    command: npm run start:dev
+
+  #Volumes
+volumes:
+  oracle-db:
+    external: true
