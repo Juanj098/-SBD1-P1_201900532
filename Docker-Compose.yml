@@ -16,23 +16,7 @@ services:
       - ./oracle-db:/opt/oracle/oradata
 
   #Backend
-
-  backend:
-    build: 
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: backend-container
-    restart: always
-    volumes:
-      - ./backend/src:/app/src
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-    environment:
-      - PORT=3000
-    command: npm run start:dev
-
+  
   #Volumes
 volumes:
   oracle-db:

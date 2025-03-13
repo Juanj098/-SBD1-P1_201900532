@@ -1,6 +1,0 @@
-Dockerfile
-docker-compose.yml
-.git
-node_modules/
-dist/
-postgres/
