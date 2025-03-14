@@ -5,7 +5,7 @@ services:
     image:  container-registry.oracle.com/database/free:latest
     container_name: "SBD1_P1_201900532"
     ports:
-      - "1522:1521"
+      - 1522:1521
     environment:
       - ORACLE_PWD=G3R4RDI
       - ORACLE_CHARACTERSET=AL32UTF8
@@ -16,7 +16,7 @@ services:
       - ./oracle-db:/opt/oracle/oradata
 
   #Backend
-  
+
   #Volumes
 volumes:
   oracle-db:
