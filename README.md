@@ -8,9 +8,9 @@ operaciones de compra, venta y distribución de productos. Este proyecto tiene
 como objetivo el diseño y desarrollo de una base de datos relacional eficiente y
 normalizada para un centro de ventas en línea de gran escala, similar a
 plataformas como Amazon o Alibaba.
-  ---
+  ***
 - ### ANALISIS
-  ---
+  ***
     El desarrollo del proyecto involucró diversas herramientas para garantizar una implementación eficiente. Para el diseño, se utilizaron Data Modeler y Excalidraw, facilitando la estructuración y visualización del modelo de datos. En la fase de implementación, se empleó Oracle como sistema de gestión de bases de datos, asegurando un almacenamiento robusto y eficiente de la información. Además, para la creación de la API, se utilizó Node.js, permitiendo una comunicación ágil y escalable entre los distintos componentes del sistema.
   ***
 - ### DISEÑO
