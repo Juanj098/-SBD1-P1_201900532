@@ -26,12 +26,6 @@ app.get('/',(req,res)=>{
     res.send('Hello world!')
 })
 
-// app.get('/ping',async(req,res)=>{
-//     let conenection 
-//     conenection = oracledb.getConnection(db)
-//     const r = await conenection.execute('SELECT NOW()')
-//     res.json(r[0])
-// })
 app.get('/ping', async (req, res) => {
     let connection;
     try {
