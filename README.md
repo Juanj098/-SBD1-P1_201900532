@@ -20,7 +20,7 @@ plataformas como Amazon o Alibaba.
     ![Modelo_logico](/Imgs/Logical.png)
   * MODELO FISICO
     ![Modelo_fisico](/Imgs/Relational_1.png)
- ---
+   ---
 - ### NORMALIZACION
   ***
   - **1FN**
