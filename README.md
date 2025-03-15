@@ -1,6 +1,7 @@
 # MANUAL TECNICO - PROYECTO 1
 
 - ### DESCRIPCION DEL PROYECTO
+  ---
   En el contexto de los sistemas de comercio electrónico, la gestión eficiente de
   datos es fundamental para garantizar el correcto funcionamiento de las
 operaciones de compra, venta y distribución de productos. Este proyecto tiene
@@ -8,8 +9,11 @@ como objetivo el diseño y desarrollo de una base de datos relacional eficiente 
 normalizada para un centro de ventas en línea de gran escala, similar a
 plataformas como Amazon o Alibaba.
 - ### ANALISIS
+  ---
     El desarrollo del proyecto involucró diversas herramientas para garantizar una implementación eficiente. Para el diseño, se utilizaron Data Modeler y Excalidraw, facilitando la estructuración y visualización del modelo de datos. En la fase de implementación, se empleó Oracle como sistema de gestión de bases de datos, asegurando un almacenamiento robusto y eficiente de la información. Además, para la creación de la API, se utilizó Node.js, permitiendo una comunicación ágil y escalable entre los distintos componentes del sistema.
+
 - ### DISEÑO
+  ---
   * MODELO CONCEPTUAL
     ![Modelo_Conceptual](/Imgs/modelo_logico.excalidraw.png)
   * MODELO LOGICO
@@ -17,11 +21,14 @@ plataformas como Amazon o Alibaba.
   * MODELO FISICO
   * ![Modelo_fisico](/Imgs/Relational_1.png)
 - ### NORMALIZACION
+  ---
   - **1FN**
   - **2FN**
   - **3FN**
 - ### DESCRIPCION DE RELACIONES
+  ---
 - ### SCRIPT DE CREACION DE BASE DE DATOS
+  ---
 ```sql
 CREATE USER
     c##juanj
@@ -225,3 +232,4 @@ CREATE TABLE TRANSFERS(
 commit;
 ```
 - ### API
+  ---
