@@ -15,10 +15,13 @@ plataformas como Amazon o Alibaba.
 - ### DISEÑO
   ***
   * MODELO CONCEPTUAL
+  <br>
     ![Modelo_Conceptual](/Imgs/modelo_logico.excalidraw.png)
   * MODELO LOGICO
+  <br>
     ![Modelo_logico](/Imgs/Logical.png)
   * MODELO FISICO
+  <br>
   * ![Modelo_fisico](/Imgs/Relational_1.png)
 - ### NORMALIZACION
   ***
