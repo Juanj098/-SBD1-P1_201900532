@@ -29,6 +29,7 @@ plataformas como Amazon o Alibaba.
   ***
 - ### DESCRIPCION DE RELACIONES
   ***
+  ***
 - ### SCRIPT DE CREACION DE BASE DE DATOS
   ***
 ```sql
