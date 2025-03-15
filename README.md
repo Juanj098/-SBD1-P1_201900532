@@ -26,6 +26,7 @@ plataformas como Amazon o Alibaba.
   - **1FN**
   - **2FN**
   - **3FN**
+  ***
 - ### DESCRIPCION DE RELACIONES
   ***
 - ### SCRIPT DE CREACION DE BASE DE DATOS
