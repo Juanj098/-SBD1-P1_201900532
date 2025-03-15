@@ -49,6 +49,7 @@ plataformas como Amazon o Alibaba.
         | **Tipo dato**  | int     | int          | int              | char   | double |
         | **length**     |         |              |                  | 256    |        |
 
+    ***
   - **2FN**
       - TABLA ENVIOS
         ##### Sin aplicar normalizacion
@@ -76,7 +77,7 @@ plataformas como Amazon o Alibaba.
         | Tipo dato        | int              | char          |
         | Length           |                  | 256           |
 
-
+    ***
   - **3FN**
   ***
 - ### DESCRIPCION DE RELACIONES
