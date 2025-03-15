@@ -25,10 +25,35 @@ plataformas como Amazon o Alibaba.
 - ### NORMALIZACION
   ***
   - **1FN**
+    - TABLA PAGO
+        ##### (sin aplicar normalizacion)
+        | Nombre columna  | id_pago | id_orden_pago | method_payment | status | monto  |
+        |----------------|---------|--------------|---------------|--------|--------|
+        |  **tipo clave**  | PK      |              |               |        |        |
+         | **No Nula = NN, Unica = U** | NN, U  | NN           | NN            | NN     | NN     |
+        | **Tipo dato**  | int     | int          | char          | char   | double |
+        | **length**     |         |              | 256           | 256    |        |
+
+        ##### (normalizada)
+        | Nombre columna  | id_method_payment | tipo  |     
+        |----------------|------------------|------|
+        | **tipo clave**  | PK               |      |
+        | **No Nula = NN, Unica = U** | NN, U  | NN   |
+        | **Tipo dato**  | int              | char |
+        | **length**     |                  | 256  |
+
+        | Nombre columna  | id_pago | id_orden_pago | id_method_payment | status | monto  |
+        |----------------|---------|--------------|------------------|--------|--------|
+        | **tipo clave**  | PK      |              |                  |        |        |
+        | **No Nula = NN, Unica = U** | NN, U | NN           | NN               | NN     | NN     |
+        | **Tipo dato**  | int     | int          | int              | char   | double |
+        | **length**     |         |              |                  | 256    |        |
+
   - **2FN**
   - **3FN**
   ***
 - ### DESCRIPCION DE RELACIONES
+  ***
   ***
 - ### SCRIPT DE CREACION DE BASE DE DATOS
   ***
