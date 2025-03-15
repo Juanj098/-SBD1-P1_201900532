@@ -84,6 +84,135 @@ plataformas como Amazon o Alibaba.
 - ### DESCRIPCION DE RELACIONES
   ***
   ***
+  ### TABLAS
+  ***
+    - CUSTOMERS 
+        | Nombre columna    | id_cliente | dpi   | name  | lastname | email | password | phone | status | fecha_registro | confirmed |
+        |-------------------|------------|-------|-------|----------|-------|----------|-------|--------|----------------|-----------|
+        | Tipo clave        | PK         |       |       |          |       |          |       |        |                |           |
+        | No Nula = NN      | NN         | NN    | NN    | NN       | NN    | NN       | NN    | NN     | NN             | NN        |
+        | Unica = U         | U          |       |       |          |       |          |       |        |                |           |
+        | Tipo dato         | int        | int   | char  | char     | char  | char     | int   | char   | date           | bool      |
+        | Length            |            |       | 256   | 256      | 256   | 256      | 256   |        |                |           |
+
+    - WORKERS
+       | Nombre columna    | id_cliente | dpi   | name  | lastname | email | password | phone | status | fecha_registro | confirmed |
+        |-------------------|------------|-------|-------|----------|-------|----------|-------|--------|----------------|-----------|
+        | Tipo clave        | PK         |       |       |          |       |          |       |        |                |           |
+        | No Nula = NN, Unica = U | NN, U   | NN    | NN    | NN       | NN    | NN       | NN    | NN     | NN             | NN        |
+        | Tipo dato         | int        | int   | char  | char     | char  | char     | int   | char   | date           | bool      |
+        | Length            |            |       | 256   | 256      | 256   | 256      | 256   |        |                |           |
+
+    - JOB_TITLE
+        | Nombre columna    | id_cargo | cargo |
+        |-------------------|----------|-------|
+        | Tipo clave        | PK       |       |
+        | No Nula = NN, Unica = U | NN, U  | NN    |
+        | Tipo dato         | int      | char  |
+        | Length            |          | 256   |
+
+
+    - INVENTORY
+        | Nombre columna    | id_inventario | id_sede | id_producto | cant |
+        |-------------------|---------------|---------|-------------|------|
+        | Tipo clave        | PK            |         |             |      |
+        | No Nula = NN, Unica = U | NN, U      | NN      | NN          | NN   |
+        | Tipo dato         | int           | int     | int         | int  |
+        | Length            |               |         |             |      |
+
+    - IMAGES
+        | Nombre columna    | id_img | id_producto | link_img |
+        |-------------------|--------|-------------|----------|
+        | Tipo clave        | PK     |             |          |
+        | No Nula = NN, Unica = U | NN, U | NN         | NN       |
+        | Tipo dato         | int    | int         | char     |
+        | Length            |        |             | 256      |
+
+    - ADDRESS
+        | Nombre columna    | id_address | id_cliente | address |
+        |-------------------|------------|------------|---------|
+        | Tipo clave        | PK         |            |         |
+        | No Nula = NN, Unica = U | NN, U   | NN         | NN      |
+        | Tipo dato         | int        | int        | char    |
+        | Length            |            |            | 256     |
+
+    - PAYMENT_METHOD
+        | Nombre columna    | id_method_payment | tipo |
+        |-------------------|-------------------|------|
+        | Tipo clave        | PK                |      |
+        | No Nula = NN, Unica = U | NN, U           | NN   |
+        | Tipo dato         | int               | char |
+        | Length            |                   | 256  |
+
+    - CATEGORY
+        | Nombre columna    | id_cate | name |
+        |-------------------|---------|------|
+        | Tipo clave        | PK      |      |
+        | No Nula = NN, Unica = U | NN, U  | NN   |
+        | Tipo dato         | int     | char |
+        | Length            |         | 256  |
+
+    - PRODUCTS
+        | Nombre columna    | id_producto | sku   | name  | precio | slug | disponibilidad |
+        |-------------------|-------------|-------|-------|--------|------|-----------------|
+        | Tipo clave        | PK          |       |       |        |      |                 |
+        | No Nula = NN, Unica = U | NN, U    | NN    | NN    | NN     | NN  | NN              |
+        | Tipo dato         | int         | char  | char  | double | char | char            |
+        | Length            |             | 256   | 256   |        | 256  | 256             |
+
+    - BRANCHES
+       | Nombre columna    | id_sede | name |
+        |-------------------|---------|------|
+        | Tipo clave        | PK      |      |
+        | No Nula = NN, Unica = U | NN, U  | NN   |
+        | Tipo dato         | char    | char |
+        | Length            | 256     | 256  |
+ 
+    - CARRIERS 
+        | Nombre columna    | id_transportista | transportista |
+        |-------------------|------------------|---------------|
+        |        Tipo clave        | PK               |               |
+        | No Nula = NN, Unica = U | NN, U         | NN            |
+        | Tipo dato         | int              | char          |
+        | Length            |                  | 256           |
+
+    - PURCHASE_ORDERS
+        | Nombre columna    | id_orden | id_cliente |
+        |-------------------|----------|------------|
+        | Tipo clave        | PK       |            |
+        | No Nula = NN, Unica = U | NN, U  | NN         |
+        | Tipo dato         | int      | int        |
+        | Length            |          |            |
+
+    - SHIPMENTS
+        | Nombre columna    | id_envios | id_orden | id_transportista | tracking | status | address |
+        |-------------------|-----------|----------|------------------|----------|--------|---------|
+        | Tipo clave        | PK        |          |                  |          |        |         |
+        | No Nula = NN, Unica = U | NN, U   | NN       | NN               | NN       | NN     | NN      |
+        | Tipo dato         | int       | int      | int              | int      | char   | char    |
+        | Length            |           | 256      | 256              |          | 256    | 256     |
+
+    - PAYMENTS
+        | Nombre columna        | id_pago | id_orden_pago | id_method_payment | status | monto |
+        |-----------------------|---------|---------------|-------------------|--------|-------|
+        | tipo clave            | PK      |               |                   |        |       |
+        | No Nula = NN, Unica = U | NN, U   | NN            | NN                | NN     | NN    |
+        | Tipo dato             | int     | int           | int               | char   | double|
+        | length                |         |               | 256               |        |       |
+
+    - DEPARTMENT
+        | Nombre columna        | id_departamento | name |
+        |-----------------------|-----------------|------|
+        | tipo clave            | PK              |      |
+        | No Nula = NN, Unica = U | NN, U           | NN   |
+        | Tipo dato             | int             | char |
+        | length                |                 | 256  |
+
+    - RETURNS
+    - TRANSFERS
+    - LIST_PRODUCTS
+
+  ***
 - ### SCRIPT DE CREACION DE BASE DE DATOS
   ***
 ```sql
