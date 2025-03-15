@@ -1,5 +1,5 @@
 # MANUAL TECNICO - PROYECTO 1
-
+  ***
 - ### DESCRIPCION DEL PROYECTO
   ***
   En el contexto de los sistemas de comercio electrónico, la gestión eficiente de
@@ -11,7 +11,7 @@ plataformas como Amazon o Alibaba.
 - ### ANALISIS
   ---
     El desarrollo del proyecto involucró diversas herramientas para garantizar una implementación eficiente. Para el diseño, se utilizaron Data Modeler y Excalidraw, facilitando la estructuración y visualización del modelo de datos. En la fase de implementación, se empleó Oracle como sistema de gestión de bases de datos, asegurando un almacenamiento robusto y eficiente de la información. Además, para la creación de la API, se utilizó Node.js, permitiendo una comunicación ágil y escalable entre los distintos componentes del sistema.
-
+  ***
 - ### DISEÑO
   ***
   * MODELO CONCEPTUAL
@@ -20,7 +20,7 @@ plataformas como Amazon o Alibaba.
     ![Modelo_logico](/Imgs/Logical.png)
   * MODELO FISICO
     ![Modelo_fisico](/Imgs/Relational_1.png)
-   ---
+  ***
 - ### NORMALIZACION
   ***
   - **1FN**
