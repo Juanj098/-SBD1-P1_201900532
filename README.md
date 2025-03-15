@@ -26,7 +26,7 @@ plataformas como Amazon o Alibaba.
   ***
   - **1FN**
     - TABLA PAGO
-        ##### (sin aplicar normalizacion)
+        ##### sin aplicar normalizacion
         | Nombre columna  | id_pago | id_orden_pago | method_payment | status | monto  |
         |----------------|---------|--------------|---------------|--------|--------|
         |  **tipo clave**  | PK      |              |               |        |        |
@@ -34,7 +34,7 @@ plataformas como Amazon o Alibaba.
         | **Tipo dato**  | int     | int          | char          | char   | double |
         | **length**     |         |              | 256           | 256    |        |
 
-        ##### (normalizada)
+        ##### normalizada
         | Nombre columna  | id_method_payment | tipo  |     
         |----------------|------------------|------|
         | **tipo clave**  | PK               |      |
@@ -50,6 +50,33 @@ plataformas como Amazon o Alibaba.
         | **length**     |         |              |                  | 256    |        |
 
   - **2FN**
+      - TABLA ENVIOS
+        ##### Sin aplicar normalizacion
+ 
+        | Nombre columna  | id_envios | id_orden | transportista | tracking | status | address |
+        |----------------|----------|---------|--------------|---------|--------|---------|
+        | **tipo clave**  | PK       |         |              |         |        |         |
+        | **No Nula = NN, Unica = U** | NN, U   | NN      | NN           | NN      | NN     | NN      |
+        | **Tipo dato**  | int      | int     | char         | int     | char   | char    |
+        | **length**     |          | 256     |             | 256     | 256    |         |
+
+        ##### Normalizada
+        | Nombre columna  | id_envios | id_orden | id_transportista | tracking | status | address |
+        |----------------|----------|---------|-----------------|---------|--------|---------|
+        | **tipo clave**  | PK       |         |                 |         |        |         |
+        | **No Nula = NN, Unica = U** | NN, U   | NN      | NN              | NN      | NN     | NN      |
+        | **Tipo dato**  | int      | int     | int             | int     | char   | char    |
+        | **length**     |          |         |                 | 256     | 256    |         |
+
+        | Nombre columna   | id_transportista | transportista |
+        |------------------|------------------|---------------|
+        | Tipo clave       | PK               |               |
+        | No Nula = NN     | NN               | NN            |
+        | Unica = U        | U                |               |
+        | Tipo dato        | int              | char          |
+        | Length           |                  | 256           |
+
+
   - **3FN**
   ***
 - ### DESCRIPCION DE RELACIONES
