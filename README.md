@@ -209,8 +209,29 @@ plataformas como Amazon o Alibaba.
         | length                |                 | 256  |
 
     - RETURNS
+        | Nombre columna        | id_devolucion | id_orden | id_producto | motivo | status |
+        |-----------------------|---------------|----------|-------------|--------|--------|
+        | tipo clave            | PK            |          |             |        |        |
+        | No Nula = NN, Unica = U | NN, U         | NN       | NN          | NN     | NN     |
+        | Tipo dato             | int           | int      | int         | char   | char   |
+        | length                |               | 256      | 256         |        | 256    |
+
     - TRANSFERS
+        | Nombre columna        | id_traslado | location_origin | location_destiny | status | date_arrive | request_at |
+        |-----------------------|-------------|-----------------|-------------------|--------|-------------|------------|
+        | tipo clave            | PK          |                 |                   |        |             |            |
+        | No Nula = NN, Unica = U | NN, U       | NN              | NN                | NN     | NN          | NN         |
+        | Tipo dato             | int         | char            | char              | char   | date        | date       |
+        | length                |             | 256             | 256               |        |             |            |
+
     - LIST_PRODUCTS
+        | Nombre columna        | product_id | orden_id | quantity | precio |
+        |-----------------------|------------|----------|----------|--------|
+        | tipo clave            | PK         |          |          |        |
+        | No Nula = NN, Unica = U | NN, U      | NN       | NN       | NN     |
+        | Tipo dato             | int        | int      | int      | double |
+        | length                |            |          |          |        |
+
 
   ***
 - ### SCRIPT DE CREACION DE BASE DE DATOS
