@@ -1,5 +1,5 @@
 # MANUAL TECNICO - PROYECTO 1
-  ***
+   ***
 - ### DESCRIPCION DEL PROYECTO
   ***
   En el contexto de los sistemas de comercio electrónico, la gestión eficiente de
