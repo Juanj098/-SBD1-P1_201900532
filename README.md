@@ -79,6 +79,7 @@ plataformas como Amazon o Alibaba.
 
     ***
   - **3FN**
+    No se aplicó la 3FN en ninguna tabla porque la base de datos es relativamente simple y no se encontraron dependencias transitivas importantes que lo requirieran. En muchos casos, forzar una normalización excesiva puede complicar innecesariamente el diseño de la base de datos, haciendo que sea más difícil de implementar y mantener. Además, en este caso, no se consideró que la normalización avanzada aportara grandes beneficios, ya que la estructura actual ya es eficiente para las necesidades del proyecto.
   ***
 - ### DESCRIPCION DE RELACIONES
   ***
